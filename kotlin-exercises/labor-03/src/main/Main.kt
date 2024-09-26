@@ -44,10 +44,20 @@ fun main(args: Array<String>) {
     }
     val msg = "Akos vagyok"
     println("message: $msg")
-    println("encoded: ")
-    messageCoding(msg, ::myCoding)
-    println("decoded: ")
-    messageCoding(msg, ::myDeCoding)
+    val cmsg = messageCoding(msg, ::myCoding)
+    println("encoded: $cmsg")
+    val dmsg = messageCoding(msg, ::myDeCoding)
+    println("decoded: $dmsg")
+    println("------------------------------")
+    val numbers = listOf(1,2,3,4,5,6,7,8,9,10)
+    numbers
+        .filter { num -> isEven(num) }
+        .forEach { println(it) }
+
+    println("-----------------------------------")
+    numbers
+        .map { num -> num*2 }
+        .forEach { println(it) }
 }
 fun addWithStringFromat(number1:Int, number2:Int):Unit{
     println("$number1 + $number2 = ${number1+number2}")
@@ -64,4 +74,8 @@ fun isPrime(number:Int):Boolean{
 }
 fun messageCoding(msg: String, func: (String) -> String): String{
     return func(msg);
+}
+
+fun isEven (number : Int):Boolean{
+    return number % 2 == 0
 }
