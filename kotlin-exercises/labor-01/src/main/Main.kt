@@ -127,7 +127,7 @@ fun main(args: Array<String>) {
         print(temp.toDouble()/count)
     }
     println()
-    groupAnagrams(listOf("eat", "tea", "tan", "ate", "nat", "bat"))
+    groupAnagrams(listOf("eat", "tEa", "Tan", "atE", "NAT", "bat"))
 }
 
 fun addWithStringFromat(number1: Int, number2: Int): Unit {
@@ -152,19 +152,19 @@ fun messageCoding(msg: String, func: (String) -> String): String {
 fun isEven(number: Int): Boolean {
     return number % 2 == 0
 }
-fun groupAnagrams(strs:List<String>){
-    var strsMap = mutableMapOf<String, MutableList<String>>()
+fun groupAnagrams(strs:List<String>):  MutableMap<String, MutableList<String>>{
+    val strsMap = mutableMapOf<String, MutableList<String>>()
 
     for (i in strs){
-        val key = i.toCharArray().sorted().joinToString("")
+        val key = i.lowercase().toCharArray().sorted().joinToString("")
         if(!strsMap.containsKey(key)){
             strsMap[key] = mutableListOf()
         }
     }
     for((key, value) in strsMap){
         for(str in strs){
-            if(key == str.toCharArray().sorted().joinToString("")){
-                strsMap[key]?.add(str)
+            if(key == str.lowercase().toCharArray().sorted().joinToString("")){
+                strsMap[key]?.add(str.lowercase())
             }
         }
     }
@@ -173,4 +173,5 @@ fun groupAnagrams(strs:List<String>){
         println("$key: $value")
     }
 
+    return strsMap
 }
