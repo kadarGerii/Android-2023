@@ -5,7 +5,7 @@ import kotlin.random.Random
 fun main(args: Array<String>) {
     while (true) {
         println("Which problem do you want to see?")
-        println("1 - Problem 1\n2 - Problem 2\n3 - Problem 3\n0 - Quit")
+        println("1 - Problem 1\n2 - Problem 2\n3 - Problem 3\n4 - Extra problem\n0 - Quit")
 
         val option = readLine()?.toIntOrNull()
         if (option == null) {
@@ -17,6 +17,7 @@ fun main(args: Array<String>) {
             1 -> problem1()
             2 -> problem2()
             3 -> problem3()
+            4 -> extraProblem()
             0 -> {
                 println("Quitting the program.")
                 return
@@ -101,4 +102,16 @@ fun problem3() {
     val customSorted = validDates.sortedWith(compareBy { it.month })
     customSorted.forEach { println("${it.year}/${it.month}/${it.day}") }
     println()
+
+}
+fun extraProblem(){
+    //some sentences fun to try:
+    //She sells sea shells by the sea shore. She sells sea shells in the shop.
+    //The cat chased the mouse. The mouse chased the cat.
+    //The more you learn, the more you realize how much more there is to learn.
+    println("Give me a text for text generation")
+    val text = readln()
+    TextGenerator.learnWords(text)
+
+    println(TextGenerator.generateText())
 }
