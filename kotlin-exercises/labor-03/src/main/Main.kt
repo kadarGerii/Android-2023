@@ -1,9 +1,20 @@
 package main
 
-fun main(args: Array<String>) {
-    println("Hello World!")
+import main.controllers.ItemController
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main(args: Array<String>) {
+
+    val itemController = ItemController()
+    println("How many questions do you want?")
+    while (true) {
+        print("> ")
+        val number = readLine()!!.toInt()
+        try {
+            itemController.quiz(number)
+            break
+        } catch (e: Exception) {
+            println("Invalid input")
+
+        }
+    }
 }
