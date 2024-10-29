@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">RecipesApp</string>
+    <string name="go_to_main_activity">Go to Main Activity</string>
+    <string name="splash_screen">Splash Screen</string>
+    <string name="change_text">Change text</string>
+    <string name="back">Back</string>
+    <string name="home_fragment">Hello blank home fragment</string>
+    <string name="home">Home</string>
+    <string name="recipes">Recipes</string>
+    <string name="profile">Profile</string>
+    <string name="recipes_app">Recipes App</string>
+    <string name="welcome">Welcome</string>
+    <string name="to_recipe_hub">to the Recipe Hub</string>
+    <string name="motto">Where you can find the best recipes and tips to enjoy a culinary experiance.</string>
+    <string name="get_strated">Get strated</string>
 </resources>
