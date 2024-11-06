@@ -3,6 +3,7 @@ package com.tasty.recipesapp.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.findFragment
 import androidx.fragment.app.replace
@@ -15,6 +16,7 @@ import com.tasty.recipesapp.databinding.ActivityMainBinding
 import com.tasty.recipesapp.ui.home.HomeFragment
 import com.tasty.recipesapp.ui.profile.ProfileFragment
 import com.tasty.recipesapp.ui.recipe.RecipesFragment
+import com.tasty.recipesapp.viewmodel.RecipeListViewModel
 
 class MainActivity : AppCompatActivity() {
 

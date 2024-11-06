@@ -13,4 +13,6 @@
     <string name="to_recipe_hub">to the Recipe Hub</string>
     <string name="motto">Where you can find the best recipes and tips to enjoy a culinary experiance.</string>
     <string name="get_strated">Get strated</string>
+    <string name="random_recipe">Random Recipe</string>
+    <string name="load_recipes">Load Recipes</string>
 </resources>
