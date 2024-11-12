@@ -1,3 +1,15 @@
+| Type  | Mark |
+| ------------- | ------------- |
+| K1  | 10  |
+| K2  | 10  |
+| K3  | 10  |
+| E1  | 10  |
+| E2  | 10  |
+| E3  | 9  |
+| Kavg  | 10  |
+| A1  | 8  |
+
+
 # Android University Course Project Template
 
 ## Overview
